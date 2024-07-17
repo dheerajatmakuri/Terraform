@@ -43,3 +43,6 @@ terraform init
 terraform plan
 terraform destroy
 
+![image](https://github.com/user-attachments/assets/0b8f9659-ff8d-4d8f-ab84-101fbba02602)
+
+
