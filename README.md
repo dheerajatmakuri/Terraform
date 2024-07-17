@@ -45,6 +45,8 @@ To get started with Terraform, you'll need to install it on your machine. Follow
 
 ![image](https://github.com/user-attachments/assets/0b8f9659-ff8d-4d8f-ab84-101fbba02602)
 
+![image](https://github.com/user-attachments/assets/dc47780d-3a1b-4294-bbec-cbbcc5216909)
+
 ![image](https://github.com/user-attachments/assets/ade9c479-a80e-4600-aa99-2ec2b5cdf814)
 
 
