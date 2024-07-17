@@ -38,10 +38,10 @@ To get started with Terraform, you'll need to install it on your machine. Follow
 
 ## Terraform mostly used commands
 
-terraform -version
-terraform init
-terraform plan
-terraform destroy
+1. terraform -version
+2. terraform init
+3. terraform plan
+4. terraform destroy
 
 ![image](https://github.com/user-attachments/assets/0b8f9659-ff8d-4d8f-ab84-101fbba02602)
 
