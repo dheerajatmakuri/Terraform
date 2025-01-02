@@ -1,18 +1,3 @@
-Configure AWS CLI:
-Open your terminal or command prompt.
-Run the following command to configure your AWS CLI:
-aws configure
-
-Enter your AWS Access Key ID, Secret Access Key, region, and output format when prompted.
-Create a directory for your Terraform configuration:
-Run the following commands to create a directory and navigate into it:
-mkdir terraform_project
-cd terraform_project
-
-Create a main.tf file:
-Inside the terraform_project directory, create a file named main.tf and open it in your preferred text editor.
-Copy and paste the following code into main.tf:
-
 terraform {
   required_providers {
     aws = {
@@ -36,16 +21,18 @@ resource "aws_instance" "app_server" {
   }
 }
 
-Initialize Terraform:
-Run the following command to initialize Terraform:
-terraform init
+terraform {
+  backend "s3" {
+    encrypt = true
+  }
+}
 
-Plan the Terraform deployment:
-Run the following command to create an execution plan:
-terraform plan
-
-Apply the Terraform configuration:
-Run the following command to apply the configuration:
-terraform apply
-
-When prompted, type yes to confirm the deployment.
+# example of 'partial configuration':
+# https://www.terraform.io/docs/backends/config.html#partial-configuration
+#
+# cat config/backend-dev.conf
+bucket  = "<account_id>-terraform-states"
+key     = "development/service-name.tfstate"
+encrypt = true
+region  = "ap-southeast-2"
+dynamodb_table = "terraform-lock"
